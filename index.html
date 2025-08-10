@@ -20,6 +20,42 @@
     <small>&copy; <span id="year"></span> Lots Website</small>
   </footer>
 
+  <!-- Interest Form Modal -->
+  <div id="interest-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modal-title">I'm Interested</h2>
+        <button class="close-btn" id="modal-close" aria-label="Close">×</button>
+      </div>
+      <div class="modal-body">
+        <p id="modal-subtitle" class="meta"></p>
+        <form id="interest-form">
+          <input type="hidden" id="lotId" name="lotId" />
+          <div>
+            <label for="name">Name</label>
+            <input class="input" id="name" name="name" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input class="input" id="email" name="email" type="email" required />
+          </div>
+          <div>
+            <label for="phone">Phone (optional)</label>
+            <input class="input" id="phone" name="phone" />
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea class="input" id="message" name="message" rows="4" placeholder="I’m interested in this lot. Please contact me."></textarea>
+          </div>
+          <div class="actions-row">
+            <button type="button" class="btn secondary outline" id="cancel">Cancel</button>
+            <button type="submit" class="btn" id="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <script defer src="assets/js/script.js"></script>
 </body>
 </html>
