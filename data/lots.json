@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Lot A1",
+    "price": 35000,
+    "size_m2": 250,
+    "status": "available",
+    "location": { "address": "Near Main Rd, Sampletown", "lat": -13.516, "lng": -71.978 },
+    "image": "assets/img/placeholder.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Lot B2",
+    "price": 42000,
+    "size_m2": 300,
+    "status": "sold",
+    "location": { "address": "Block 2, Sampletown" },
+    "image": "assets/img/placeholder.jpg"
+  }
+]
