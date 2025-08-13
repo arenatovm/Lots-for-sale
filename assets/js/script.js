@@ -3,7 +3,7 @@ const yearEl = document.getElementById("year");
 yearEl.textContent = new Date().getFullYear();
 
 /** === Config (we'll set this later when we create the API) === */
-const API_ENDPOINT = "https://bv3gb8nge7.execute-api.us-east-1.amazonaws.com/"; // <- leave empty for now; we'll fill with API Gateway URL later
+const API_ENDPOINT = "https://bv3gb8nge7.execute-api.us-east-1.amazonaws.com/interest"; // <- leave empty for now; we'll fill with API Gateway URL later
 
 function card(lot) {
   const status = lot.status?.toLowerCase() === "available" ? "Available" : "Sold";
