@@ -81,6 +81,14 @@ modal.addEventListener("click", (e) => {
 });
 
 // handle submit (UI-only for now)
+// if honeypot has any value, silently “succeed” but do nothing
+if (form.hp && form.hp.value.trim()) {
+  console.warn("Honeypot triggered — dropping submission.");
+  alert("Thanks! We received your interest and will contact you soon.");
+  closeModal();
+  return;
+}
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 

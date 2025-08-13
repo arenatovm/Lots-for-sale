@@ -47,6 +47,12 @@
             <label for="message">Message</label>
             <textarea class="input" id="message" name="message" rows="4" placeholder="I’m interested in this lot. Please contact me."></textarea>
           </div>
+          <!-- Honeypot: humans never see/fill this -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="hp">Leave this field blank</label>
+            <input id="hp" name="hp" autocomplete="off" tabindex="-1" />
+          </div>
+
           <div class="actions-row">
             <button type="button" class="btn secondary outline" id="cancel">Cancel</button>
             <button type="submit" class="btn" id="submit">Send</button>

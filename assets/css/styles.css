@@ -26,3 +26,12 @@ html, body { margin: 0; padding: 0; font-family: system-ui, Arial, sans-serif; c
 .input, textarea { width: 100%; padding: .6rem .7rem; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; }
 .actions-row { display: flex; gap: .6rem; margin-top: .6rem; }
 .close-btn { background: none; border: none; font-size: 1.2rem; cursor: pointer; }
+
+/* Honeypot (kept off-screen so screen readers skip it too) */
+.hp-field {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
