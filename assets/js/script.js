@@ -1,16 +1,21 @@
+// ---------- Basic setup ----------
 const lotsEl = document.getElementById("lots");
 const yearEl = document.getElementById("year");
 yearEl.textContent = new Date().getFullYear();
 
-/** === Config (we'll set this later when we create the API) === */
-const API_ENDPOINT = "https://bv3gb8nge7.execute-api.us-east-1.amazonaws.com/interest"; // <- leave empty for now; we'll fill with API Gateway URL later
+/** API endpoint (API Gateway HTTP API -> Lambda) */
+const API_ENDPOINT = "https://bv3gb8nge7.execute-api.us-east-1.amazonaws.com/interest";
 
+// ---------- Card rendering ----------
 function card(lot) {
   const status = lot.status?.toLowerCase() === "available" ? "Available" : "Sold";
   const isSold = status === "Sold";
-  const viewMapUrl = lot.location?.lat && lot.location?.lng
-    ? `https://www.google.com/maps?q=${lot.location.lat},${lot.location.lng}`
-    : (lot.location?.address ? `https://www.google.com/maps?q=${encodeURIComponent(lot.location.address)}` : "#");
+  const viewMapUrl =
+    lot.location?.lat && lot.location?.lng
+      ? `https://www.google.com/maps?q=${lot.location.lat},${lot.location.lng}`
+      : (lot.location?.address
+          ? `https://www.google.com/maps?q=${encodeURIComponent(lot.location.address)}`
+          : "#");
 
   return `
   <article class="card">
@@ -44,7 +49,7 @@ async function loadLots() {
 }
 loadLots();
 
-/** ========== Modal logic ========== */
+// ---------- Modal logic ----------
 const modal = document.getElementById("interest-modal");
 const form = document.getElementById("interest-form");
 const modalClose = document.getElementById("modal-close");
@@ -68,9 +73,7 @@ function closeModal() {
 // open modal from any interest button
 document.addEventListener("click", (e) => {
   const btn = e.target.closest(".interest-btn");
-  if (btn) {
-    openModal(btn.dataset.lotId, btn.dataset.lotTitle);
-  }
+  if (btn) openModal(btn.dataset.lotId, btn.dataset.lotTitle);
 });
 
 modalClose.addEventListener("click", closeModal);
@@ -80,17 +83,17 @@ modal.addEventListener("click", (e) => {
   if (e.target === modal) closeModal();
 });
 
-// handle submit (UI-only for now)
-// if honeypot has any value, silently “succeed” but do nothing
-if (form.hp && form.hp.value.trim()) {
-  console.warn("Honeypot triggered — dropping submission.");
-  alert("Thanks! We received your interest and will contact you soon.");
-  closeModal();
-  return;
-}
-
+// ---------- Submit handler (with honeypot) ----------
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+
+  // Honeypot: real users never fill #hp (added in HTML). If filled, silently “succeed”.
+  if (form.hp && form.hp.value.trim()) {
+    console.warn("Honeypot triggered — dropping submission.");
+    alert("Thanks! We received your interest and will contact you soon.");
+    closeModal();
+    return;
+  }
 
   const payload = {
     lotId: lotIdInput.value,
@@ -98,8 +101,10 @@ form.addEventListener("submit", async (e) => {
     email: form.email.value.trim(),
     phone: form.phone.value.trim(),
     message: form.message.value.trim(),
+    hp: form.hp ? form.hp.value.trim() : ""
   };
 
+  // simple client-side validation
   if (!payload.name || !payload.email) {
     alert("Please enter your name and a valid email.");
     return;
@@ -115,9 +120,9 @@ form.addEventListener("submit", async (e) => {
       body: JSON.stringify(payload),
     });
 
-    const text = await res.text(); // read body safely even if not JSON
+    const text = await res.text(); // read safely even if not JSON
     let data = null;
-    try { data = text ? JSON.parse(text) : null; } catch { /* non-JSON body */ }
+    try { data = text ? JSON.parse(text) : null; } catch {}
 
     if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}: ${text || "(no body)"}`);
     if (data && data.ok === false) throw new Error(data.error || "API returned not ok");
