@@ -35,3 +35,16 @@ html, body { margin: 0; padding: 0; font-family: system-ui, Arial, sans-serif; c
   height: 1px;
   overflow: hidden;
 }
+
+/* Inline form status */
+.status { 
+  margin-top: .25rem;
+  font-size: .95rem;
+  padding: .5rem .6rem;
+  border-radius: 8px;
+  display: none;
+}
+.status { margin-top: .25rem; font-size: .95rem; padding: .5rem .6rem; border-radius: 8px; display: none; }
+.status.show { display: block; }
+.status.success { background: #ecfdf5; border: 1px solid #34d399; color: #065f46; }
+.status.error   { background: #fef2f2; border: 1px solid #f87171; color: #7f1d1d; }

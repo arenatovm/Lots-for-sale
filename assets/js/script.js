@@ -58,6 +58,20 @@ const lotIdInput = document.getElementById("lotId");
 const modalSubtitle = document.getElementById("modal-subtitle");
 const submitBtn = document.getElementById("submit");
 
+const statusEl = document.getElementById("form-status");
+
+function showStatus(type, text) {
+  if (!statusEl) return;
+  statusEl.textContent = text;
+  statusEl.className = `status show ${type}`; // 'success' | 'error'
+}
+
+function clearStatus() {
+  if (!statusEl) return;
+  statusEl.textContent = "";
+  statusEl.className = "status";
+}
+
 function openModal(lotId, lotTitle) {
   lotIdInput.value = lotId;
   modalSubtitle.textContent = `Inquiry for: ${lotTitle}`;
@@ -86,6 +100,7 @@ modal.addEventListener("click", (e) => {
 // ---------- Submit handler (with honeypot) ----------
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+  clearStatus();
 
   // Honeypot: real users never fill #hp (added in HTML). If filled, silently “succeed”.
   if (form.hp && form.hp.value.trim()) {
@@ -106,7 +121,7 @@ form.addEventListener("submit", async (e) => {
 
   // simple client-side validation
   if (!payload.name || !payload.email) {
-    alert("Please enter your name and a valid email.");
+    showStatus("Please enter your name and a valid email.");
     return;
   }
 
