@@ -83,15 +83,15 @@ modal.addEventListener("click", (e) => {
 // handle submit (UI-only for now)
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+
   const payload = {
     lotId: lotIdInput.value,
     name: form.name.value.trim(),
     email: form.email.value.trim(),
     phone: form.phone.value.trim(),
-    message: form.message.value.trim()
+    message: form.message.value.trim(),
   };
 
-  // simple client-side validation
   if (!payload.name || !payload.email) {
     alert("Please enter your name and a valid email.");
     return;
@@ -101,22 +101,24 @@ form.addEventListener("submit", async (e) => {
   submitBtn.textContent = "Sending...";
 
   try {
-    if (!API_ENDPOINT) {
-      // No backend yet: simulate success
-      await new Promise(r => setTimeout(r, 700));
-    } else {
-      const res = await fetch(API_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
-      if (!res.ok) throw new Error("Request failed");
-    }
+    const res = await fetch(API_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    const text = await res.text(); // read body safely even if not JSON
+    let data = null;
+    try { data = text ? JSON.parse(text) : null; } catch { /* non-JSON body */ }
+
+    if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}: ${text || "(no body)"}`);
+    if (data && data.ok === false) throw new Error(data.error || "API returned not ok");
+
     alert("Thanks! We received your interest and will contact you soon.");
     closeModal();
   } catch (err) {
-    console.error(err);
-    alert("Sorry, something went wrong. Please try again.");
+    console.error("Submit failed:", err);
+    alert(`Sorry, something went wrong.\n${err.message || err}`);
   } finally {
     submitBtn.disabled = false;
     submitBtn.textContent = "Send";
