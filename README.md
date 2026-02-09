@@ -98,8 +98,6 @@ Additional features:
 ├── template.yaml
 └── src/
 
----
-
 ##  Deployment
 
 ### Backend
