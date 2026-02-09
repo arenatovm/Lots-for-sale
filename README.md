@@ -100,7 +100,7 @@ Additional features:
     └── src/
 ```
 
-Deployment 
+## Deployment 
  
 Backend  
 ```
@@ -112,7 +112,7 @@ Frontend
 ```
 aws s3 sync . s3://YOUR_BUCKET_NAME
 ```
-Author  
+## Author  
 
 Andres Vera  
 Cloud & Security Engineer  
