@@ -110,9 +110,11 @@ cd backend
 sam build
 sam deploy --guided
 
-```
-### Frontend
+```### Frontend
+
+```bash
 aws s3 sync . s3://
+
 
 ## Author
 
@@ -121,3 +123,5 @@ aws s3 sync . s3://
 Cloud & Security Engineer  
 AWS Certified Solutions Architect & Developer  
 
+
+---
