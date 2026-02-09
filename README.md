@@ -110,6 +110,8 @@ cd backend
 sam build
 sam deploy --guided
 
+```
+
 ### Frontend
 
 aws s3 sync . s3://YOUR_BUCKET_NAME
