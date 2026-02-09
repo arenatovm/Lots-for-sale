@@ -113,6 +113,8 @@ sam deploy --guided
 
 aws s3 sync . s3://YOUR_BUCKET_NAME
 
+---
+
 ## Author
 
 Andres Vera
