@@ -22,15 +22,15 @@ The system is designed to be low-cost, scalable, and highly available without ma
 
 ## Architecture
 
-Frontend (S3 + CloudFront)
-↓
-API Gateway (HTTP API)
-↓
-AWS Lambda (Validation & Logic)
-↓
-DynamoDB (Lead Storage)
-↓
-Amazon SES (Email Notifications)
+Frontend (S3 + CloudFront)  
+↓  
+API Gateway (HTTP API)  
+↓  
+AWS Lambda (Validation & Logic)  
+↓  
+DynamoDB (Lead Storage)  
+↓  
+Amazon SES (Email Notifications)  
 
 ---
 
@@ -114,12 +114,10 @@ sam deploy --guided
 
 aws s3 sync . s3://YOUR_BUCKET_NAME
 
-
----
 ```
 ## Author
 
-Andres Vera
-Cloud & Security Engineer
-AWS Certified Solutions Architect & Developer
+**Andres Vera**  
+Cloud & Security Engineer  
+AWS Certified Solutions Architect & Developer  
 
