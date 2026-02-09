@@ -85,20 +85,21 @@ Additional features:
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
+```
 /
 ├── index.html
 ├── assets/
-│ ├── css/
-│ ├── img/
-│ ├── js/
-│ └── data/
+│   ├── css/
+│   ├── img/
+│   ├── js/
+│   └── data/
 └── backend/
-├── template.yaml
-└── src/
+    ├── template.yaml
+    └── src/
+```
 
----
 
 ##  Deployment
 
