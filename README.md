@@ -111,16 +111,13 @@ sam build
 sam deploy --guided
 
 ```
-
 ### Frontend
-
 aws s3 sync . s3://
 
-```
 ## Author
 
 ```
 **Andres Vera**  
 Cloud & Security Engineer  
 AWS Certified Solutions Architect & Developer  
-```
+
