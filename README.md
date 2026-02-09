@@ -112,13 +112,10 @@ sam deploy --guided
 
 ### Frontend
 
-```bash
-aws s3 sync . s3://
+aws s3 sync . s3://YOUR_BUCKET_NAME
 
+Author
 
-## Author
-
-```
 **Andres Vera**  
 Cloud & Security Engineer  
 AWS Certified Solutions Architect & Developer  
