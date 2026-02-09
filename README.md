@@ -100,27 +100,17 @@ Additional features:
     └── src/
 ```
 
-
-##  Deployment
-
-### Backend
-
-```bash
+Deployment
+Backend
 cd backend
 sam build
 sam deploy --guided
 
----
-
-### Frontend
-
+Frontend
 aws s3 sync . s3://YOUR_BUCKET_NAME
 
 Author
 
-**Andres Vera**  
-Cloud & Security Engineer  
-AWS Certified Solutions Architect & Developer  
-
-
----
+Andres Vera
+Cloud & Security Engineer
+AWS Certified Solutions Architect & Developer
