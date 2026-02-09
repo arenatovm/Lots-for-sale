@@ -103,14 +103,15 @@ Additional features:
 Deployment 
  
 Backend  
-
+```
 cd backend
 sam build
 sam deploy --guided  
-
-Frontend
+```
+Frontend  
+```
 aws s3 sync . s3://YOUR_BUCKET_NAME
-
+```
 Author  
 
 Andres Vera  
