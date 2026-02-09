@@ -98,6 +98,8 @@ Additional features:
 ├── template.yaml
 └── src/
 
+---
+
 ##  Deployment
 
 ### Backend
@@ -110,6 +112,7 @@ sam deploy --guided
 ### Frontend
 
 aws s3 sync . s3://YOUR_BUCKET_NAME
+
 
 ---
 
