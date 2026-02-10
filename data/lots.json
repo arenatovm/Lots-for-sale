@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Lot A1",
+    "title": "Lot 1",
     "price": 35000,
     "size_m2": 250,
     "status": "available",
@@ -10,7 +10,34 @@
   },
   {
     "id": 2,
-    "title": "Lot B2",
+    "title": "Lot 3",
+    "price": 42000,
+    "size_m2": 300,
+    "status": "sold",
+    "location": { "address": "Block 2, Sampletown" },
+    "image": "assets/img/placeholder.jpg"
+  },  
+  {
+    "id": 3,
+    "title": "Lot 5",
+    "price": 42000,
+    "size_m2": 300,
+    "status": "sold",
+    "location": { "address": "Block 2, Sampletown" },
+    "image": "assets/img/placeholder.jpg"
+  },  
+  {
+    "id": 4,
+    "title": "Lot 7",
+    "price": 42000,
+    "size_m2": 300,
+    "status": "sold",
+    "location": { "address": "Block 2, Sampletown" },
+    "image": "assets/img/placeholder.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Lot 9",
     "price": 42000,
     "size_m2": 300,
     "status": "sold",
