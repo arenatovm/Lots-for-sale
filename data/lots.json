@@ -5,7 +5,7 @@
     "price": 33000,
     "size_m2": 350,
     "status": "available",
-    "location": { "address": "Near Main Rd, Sampletown", "lat": -13.516, "lng": -71.978 },
+    "location": { "address": "5-min to Main Rd, Block 1, Larespampa", "lat": -13.516, "lng": -71.978 },
     "image": "assets/img/placeholder.jpg"
   },
   {
@@ -14,7 +14,7 @@
     "price": 38000,
     "size_m2": 400,
     "status": "sold",
-    "location": { "address": "Block 2, Sampletown" },
+    "location": { "address": "5-min to Main Rd, Block 3, Larespampa" },
     "image": "assets/img/placeholder.jpg"
   },  
   {
@@ -23,7 +23,7 @@
     "price": 42000,
     "size_m2": 450,
     "status": "available",
-    "location": { "address": "Block 2, Sampletown" },
+    "location": { "address": "5-min to Main Rd, Block 5, Larespampa" },
     "image": "assets/img/placeholder.jpg"
   },  
   {
@@ -32,7 +32,7 @@
     "price": 42000,
     "size_m2": 450,
     "status": "available",
-    "location": { "address": "Block 2, Sampletown" },
+    "location": { "address": "5-min to Main Rd, Block 7, Larespampa" },
     "image": "assets/img/placeholder.jpg"
   },
   {
@@ -41,7 +41,7 @@
     "price": 62000,
     "size_m2": 600,
     "status": "available",
-    "location": { "address": "Block 2, Sampletown" },
+    "location": { "address": "5-min to Main Rd, Block 9, Larespampa" },
     "image": "assets/img/placeholder.jpg"
   }
 ]
