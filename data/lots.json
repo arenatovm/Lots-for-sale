@@ -22,7 +22,7 @@
     "title": "Lot 5",
     "price": 42000,
     "size_m2": 300,
-    "status": "sold",
+    "status": "available",
     "location": { "address": "Block 2, Sampletown" },
     "image": "assets/img/placeholder.jpg"
   },  
@@ -31,7 +31,7 @@
     "title": "Lot 7",
     "price": 42000,
     "size_m2": 300,
-    "status": "sold",
+    "status": "available",
     "location": { "address": "Block 2, Sampletown" },
     "image": "assets/img/placeholder.jpg"
   },
@@ -40,7 +40,7 @@
     "title": "Lot 9",
     "price": 42000,
     "size_m2": 300,
-    "status": "sold",
+    "status": "available",
     "location": { "address": "Block 2, Sampletown" },
     "image": "assets/img/placeholder.jpg"
   }
