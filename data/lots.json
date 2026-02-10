@@ -6,7 +6,7 @@
     "size_m2": 350,
     "status": "available",
     "location": { "address": "5-min to Main Rd, Block 1, Larespampa", "lat": -13.516, "lng": -71.978 },
-    "image": "assets/img/Lots/lot 1.jpg"
+    "image": "assets/img/Lots/lot 1.png"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "size_m2": 400,
     "status": "sold",
     "location": { "address": "5-min to Main Rd, Block 3, Larespampa" },
-    "image": "assets/img/Lots/lot 3.jpg"
+    "image": "assets/img/Lots/lots.png"
   },  
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "size_m2": 450,
     "status": "available",
     "location": { "address": "5-min to Main Rd, Block 5, Larespampa" },
-    "image": "assets/img/Lots/lot 5.jpg"
+    "image": "assets/img/Lots/lot 5.png"
   },  
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "size_m2": 450,
     "status": "available",
     "location": { "address": "5-min to Main Rd, Block 7, Larespampa" },
-    "image": "assets/img/Lots/lot 7.jpg"
+    "image": "assets/img/Lots/lot 7.png"
   },
   {
     "id": 5,
@@ -42,6 +42,6 @@
     "size_m2": 600,
     "status": "available",
     "location": { "address": "5-min to Main Rd, Block 9, Larespampa" },
-    "image": "assets/img/Lots/lot 9.jpg"
+    "image": "assets/img/Lots/lot 9.png"
   }
 ]
