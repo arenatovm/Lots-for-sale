@@ -2,8 +2,8 @@
   {
     "id": 1,
     "title": "Lot 1",
-    "price": 35000,
-    "size_m2": 250,
+    "price": 33000,
+    "size_m2": 350,
     "status": "available",
     "location": { "address": "Near Main Rd, Sampletown", "lat": -13.516, "lng": -71.978 },
     "image": "assets/img/placeholder.jpg"
@@ -11,8 +11,8 @@
   {
     "id": 2,
     "title": "Lot 3",
-    "price": 42000,
-    "size_m2": 300,
+    "price": 38000,
+    "size_m2": 400,
     "status": "sold",
     "location": { "address": "Block 2, Sampletown" },
     "image": "assets/img/placeholder.jpg"
@@ -21,7 +21,7 @@
     "id": 3,
     "title": "Lot 5",
     "price": 42000,
-    "size_m2": 300,
+    "size_m2": 450,
     "status": "available",
     "location": { "address": "Block 2, Sampletown" },
     "image": "assets/img/placeholder.jpg"
@@ -30,7 +30,7 @@
     "id": 4,
     "title": "Lot 7",
     "price": 42000,
-    "size_m2": 300,
+    "size_m2": 450,
     "status": "available",
     "location": { "address": "Block 2, Sampletown" },
     "image": "assets/img/placeholder.jpg"
@@ -38,8 +38,8 @@
   {
     "id": 5,
     "title": "Lot 9",
-    "price": 42000,
-    "size_m2": 300,
+    "price": 62000,
+    "size_m2": 600,
     "status": "available",
     "location": { "address": "Block 2, Sampletown" },
     "image": "assets/img/placeholder.jpg"
