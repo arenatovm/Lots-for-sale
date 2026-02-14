@@ -48,3 +48,39 @@ html, body { margin: 0; padding: 0; font-family: system-ui, Arial, sans-serif; c
 .status.show { display: block; }
 .status.success { background: #ecfdf5; border: 1px solid #34d399; color: #065f46; }
 .status.error   { background: #fef2f2; border: 1px solid #f87171; color: #7f1d1d; }
+
+/* ============================= */
+/* Overview Images Section       */
+/* ============================= */
+
+.overview {
+  max-width: 1100px;
+  margin: 20px auto 30px auto;
+  padding: 0 1rem;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.overview-grid img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-grid img {
+    height: 220px;
+  }
+}
