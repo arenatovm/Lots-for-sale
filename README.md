@@ -123,7 +123,16 @@ sam deploy --guided
 ```
 Frontend  
 ```
-aws s3 sync . s3://
+# Sync static files to S3
+aws s3 sync . s3://lots-for-sale-andres \
+  --exclude "backend/*" \
+  --delete
+
+# Invalidate CloudFront cache
+aws cloudfront create-invalidation \
+  --distribution-id E3OIO4GSNFMOOY \
+  --paths "/*"
+
 ```
 ---
 
