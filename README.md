@@ -6,6 +6,18 @@ This project demonstrates real-world cloud architecture, security controls, and 
 
 ---
 
+## 🌐 Live Website
+
+👉 https://dlqlykqv4u2de.cloudfront.net/
+
+---
+
+## 📸 Application Preview
+
+![Homepage Screenshot](assets/readme/homepage.png)
+
+---
+
 ## Project Overview
 
 The platform allows potential buyers to:
