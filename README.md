@@ -14,7 +14,7 @@ This project demonstrates real-world cloud architecture, security controls, and 
 
 ## 📸 Application Preview
 
-![Homepage Screenshot](assets/readme/homepage.png)
+![Homepage Screenshot](assets/readme/homepage.jpg)
 
 ---
 
