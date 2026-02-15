@@ -34,15 +34,17 @@ The system is designed to be low-cost, scalable, and highly available without ma
 
 ## Architecture
 
-Frontend (S3 + CloudFront)  
+CloudFront (CDN + HTTPS + Edge Caching)  
 ↓  
-API Gateway (HTTP API)  
+Amazon S3 (Static Frontend Hosting – Private Bucket via OAC)  
 ↓  
-AWS Lambda (Validation & Logic)  
+API Gateway (HTTP API – Throttling & Rate Limiting)  
 ↓  
-DynamoDB (Lead Storage)  
+AWS Lambda (Input Validation & Business Logic)  
 ↓  
-Amazon SES (Email Notifications)  
+DynamoDB (On-Demand Lead Storage)  
+↓  
+Amazon SES (Automated Email Notification) 
 
 ---
 
@@ -69,8 +71,8 @@ Additional features:
 
 ### Infrastructure
 - AWS SAM (Infrastructure as Code)
-- S3 Static Hosting
-- CloudFront CDN
+- Amazon S3 (Private Bucket with OAC)
+- Amazon CloudFront (CDN + HTTPS)
 - CloudWatch Logs
 
 ---
@@ -94,6 +96,16 @@ Additional features:
 - No hardcoded secrets  
 - IAM least-privilege policies  
 - HTTPS via CloudFront  
+
+---
+
+## Cost Optimization Strategy
+
+- Serverless architecture (no EC2)
+- DynamoDB On-Demand (pay per request)
+- CloudFront caching reduces origin load
+- No always-on infrastructure
+- Low monthly operational cost (estimated under $5 for low traffic)
 
 ---
 
@@ -139,5 +151,5 @@ aws cloudfront create-invalidation \
 ## Author  
 
 Andres Vera  
-Cloud & Security Engineer  
-AWS Certified Solutions Architect & Developer
+Cloud & Cybersecurity Engineer  
+AWS Certified Solutions Architect | AWS Developer Associate | CompTIA Security+
