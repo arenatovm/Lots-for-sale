@@ -4,7 +4,7 @@ Description: Lots for Sale - Serverless backend (Leads API)
 
 Globals:
   Function:
-    Runtime: python3.12
+    Runtime: python3.13.2
     Timeout: 10
     MemorySize: 128
 
