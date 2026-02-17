@@ -113,15 +113,15 @@ Additional features:
 
 ```
 /
-├── index.html
-├── assets/
-│   ├── css/
-│   ├── img/
-│   ├── js/
-│   └── data/
-└── backend/
-    ├── template.yaml
-    └── src/
+LOTS-FOR-SALE/
+├─ index.html
+├─ assets/
+├─ data/
+├─ backend/
+   ├─ template.yaml
+   └─ src/
+      └─ app.py
+
 ```
 ---
 
